@@ -14,7 +14,7 @@ const app = express();
 
  // Enable CORS for our React frontend
  app.use(cors({
-   origin: 'http://localhost:5173',  // adjust if your front runs elsewhere
+   origin: 'https://altrechem.onrender.com',  // adjust if your front runs elsewhere
    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
    allowedHeaders: ['Content-Type','Authorization']
 }));
