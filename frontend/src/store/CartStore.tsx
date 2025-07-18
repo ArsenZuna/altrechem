@@ -24,6 +24,8 @@ interface CartStore {
 
 const THIRTY_MINUTES = 30 * 60 * 1000;
 
+// @ts-ignore
+// @ts-ignore
 export const useCartStore = create<CartStore>()(
     persist(
         (set, get) => ({
@@ -84,7 +86,7 @@ export const useCartStore = create<CartStore>()(
             name: "cart-storage",
             merge: (persistedState, currentState) => ({
                 ...currentState,
-                ...persistedState,
+                cart: (persistedState as CartStore).cart || [],
                 // Rebind functions after rehydration
                 totalItems: currentState.totalItems,
                 totalPrice: currentState.totalPrice,

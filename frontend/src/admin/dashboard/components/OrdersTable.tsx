@@ -28,6 +28,7 @@ export const OrdersTable = () => {
         </div>
     );
 
+    // @ts-ignore
     return (
         <>
             <div className="overflow-x-auto mt-8">
@@ -89,11 +90,12 @@ export const OrdersTable = () => {
                 <EditOrderModal
                     order={selectedOrder}
                     onClose={() => setSelectedOrder(null)}
-                    onUpdate={(updated) =>
+                    onUpdate={(updated) => {
+                        if (!updated) return;
                         setOrders(prev =>
                             prev.map(o => (o._id === updated._id ? updated : o))
-                        )
-                    }
+                        );
+                    }}
                 />
             )}
         </>

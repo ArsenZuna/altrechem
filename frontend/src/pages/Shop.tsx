@@ -14,7 +14,7 @@ export const Shop = () => {
     const [sortOption, setSortOption] = useState("Name: A to Z");
     const [categories, setCategories] = useState<string[]>([]);
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-    const [priceRange, setPriceRange] = useState([0, 3000]);
+    const [priceRange, setPriceRange] = useState<[number, number]>([0, 3000]);
     const [showSaleOnly, setShowSaleOnly] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [loading, setLoading] = useState(true);

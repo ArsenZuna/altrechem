@@ -31,7 +31,7 @@ export const EditOrderModal: React.FC<Props> = ({ order, onClose, onUpdate }) =>
                 const allProducts = res.data;
 
                 const itemsWithStock = order.orderItems.map(item => {
-                    const product = allProducts.find(p => p._id === item.product);
+                    const product = allProducts.find((p: { _id: string; }) => p._id === item.product);
                     return {
                         ...item,
                         countInStock: product?.countInStock || 0,
