@@ -89,7 +89,7 @@ export const TopProduct: React.FC = () => {
             </div>
             {top?.imgUrl && (
                 <img
-                    src={top.imgUrl}
+                    src={`${import.meta.env.VITE_BASE_URL}${top.imgUrl}`}
                     alt={top.name}
                     className="w-24 h-24 object-cover rounded"
                 />

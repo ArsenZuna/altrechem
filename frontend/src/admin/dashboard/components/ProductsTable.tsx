@@ -56,7 +56,7 @@ export const ProductsTable = () => {
                     <tr key={product._id} className='hover:bg-gray-200/70 cursor-pointer' onClick={() => setEditingProduct(product)}>
                         <td className="px-6 py-4 whitespace-nowrap ">
                             <img
-                                src={product.images?.[0]?.url || "/placeholder.jpg"}
+                                src={`${import.meta.env.VITE_BASE_URL}${product.images[0]?.url}` || "/placeholder.jpg"}
                                 alt={product.name}
                                 className="w-14 h-14 object-cover rounded"
                             />

@@ -45,7 +45,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
             <div className="relative flex justify-center items-center hover:scale-110 transition-all duration-300">
                 <img
-                    src={product.images[0]?.url}
+                    src={`${import.meta.env.VITE_BASE_URL}${product.images[0]?.url}`}
                     alt={product.name}
                     className={`object-cover ${isOutOfStock ? 'grayscale opacity-70' : 'hover:opacity-90'}`}
                 />
