@@ -26,8 +26,20 @@ export const ProductView = () => {
 
         API.get<Product>(`/api/products/${productId}`)
             .then((res) => {
-                setProduct(res.data);
-                setMainImage(res.data.images[0]?.url || null);
+                const productData = res.data;
+
+                // Map all image URLs to be fully qualified with backend base URL
+                const updatedImages = productData.images.map(img => ({
+                    url: `${import.meta.env.VITE_BASE_URL}${img.url}`
+                }));
+
+                const updatedProduct = {
+                    ...productData,
+                    images: updatedImages,
+                };
+
+                setProduct(updatedProduct);
+                setMainImage(updatedImages[0]?.url || null);
             })
             .catch((err) => setError(err.message || "Failed to fetch product"))
             .finally(() => setLoading(false));
