@@ -20,7 +20,7 @@ export const Testimonials: React.FC<TestimonialData> = ({name, text, role, avata
                         <Star size={25} fill="currentColor"/>
                         <Star size={20} fill="currentColor"/>
                     </div>
-                    <p className="text-lg tracking-tight italic pb-2 slide-text-active text-shadow-2xs">
+                    <p className="text-md mg:text-lg tracking-tight italic pb-2 slide-text-active text-shadow-2xs">
                         "{text}"
                     </p>
                 </div>
