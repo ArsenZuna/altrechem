@@ -57,11 +57,11 @@ export const ProductView = () => {
                     {product.images.map((img, idx) => (
                         <img
                             key={idx}
-                            src={img.url}
+                            src={`${import.meta.env.VITE_BASE_URL}${img.url}`}
                             alt={`Thumbnail ${idx}`}
-                            onClick={() => setMainImage(img.url)}
+                            onClick={() => setMainImage(`${import.meta.env.VITE_BASE_URL}${img.url}`)}
                             className={`w-20 h-20 object-cover border rounded cursor-pointer 
-                                ${mainImage === img.url ? "border-green-600 ring-2 ring-green-400" : "border-gray-300"}`}
+    ${mainImage === `${import.meta.env.VITE_BASE_URL}${img.url}` ? "border-green-600 ring-2 ring-green-400" : "border-gray-300"}`}
                         />
                     ))}
                 </div>
@@ -69,7 +69,7 @@ export const ProductView = () => {
                 {/* Main Image */}
                 <div>
                     <img
-                        src={mainImage || product.images[0]?.url}
+                        src={mainImage || `${import.meta.env.VITE_BASE_URL}${product.images[0]?.url}`}
                         alt={product.name}
                         className="xl:w-[650px] xl:h-[600px] object-cover rounded shadow-2xl"
                     />
