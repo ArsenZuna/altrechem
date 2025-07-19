@@ -26,6 +26,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 
 // Serve uploads
+app.use('/uploads', express.static('uploads'));
 app.use('/uploads/products', express.static('uploads/products'));
 
 // Error handlers
