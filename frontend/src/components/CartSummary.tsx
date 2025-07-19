@@ -7,7 +7,11 @@ export const CartSummary = ({ cartItems, totalPrice, addToCart, decrementQuantit
         <div className='space-y-4'>
             {cartItems.map((item: any) => (
                 <div key={item._id} className='flex space-x-4'>
-                    <img src={`${import.meta.env.VITE_BASE_URL}${item.images[0]?.url}`} alt={item.name} className='w-16 h-16 rounded' />
+                    <img src={
+                        item.images[0]?.url
+                            ? `${import.meta.env.VITE_BASE_URL}${item.images[0]?.url}`
+                            : "/fallback.jpg"
+                    } alt={item.name} className='w-16 h-16 rounded' />
                     <div className='w-full'>
                         <div className='flex justify-between font-medium'>
                             <p>{item.name}</p>

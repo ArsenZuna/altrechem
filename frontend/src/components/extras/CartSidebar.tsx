@@ -44,7 +44,11 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => 
                             return (
                                 <div key={item._id} className="flex items-center space-x-3 pb-2">
                                     <img
-                                        src={item.images[0]?.url}
+                                        src={
+                                            item.images[0]?.url
+                                                ? `${import.meta.env.VITE_BASE_URL}${item.images[0]?.url}`
+                                                : "/fallback.jpg"
+                                        }
                                         alt={item.name}
                                         className="w-18 h-18 object-cover rounded"
                                     />
