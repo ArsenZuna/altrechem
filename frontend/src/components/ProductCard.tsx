@@ -84,7 +84,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                                 : 'bg-blue-300 text-black shadow-md  hover:bg-blue-400 hover:text-white'
                         }`}
                     >
-                        {isOutOfStock ? 'Out Of Stock' : 'Add To Cart'}
+                        {isOutOfStock ? 'Out Of Stock' : `${t("add_to_cart.0.button")}`}
                     </button>
                 </div>
             </div>

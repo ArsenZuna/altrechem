@@ -11,8 +11,8 @@ i18n
     .use(initReactI18next)       // pass i18n instance to react-i18next
     .init({
         resources: {
-            en: { translation: en },
             sq: { translation: sq },
+            en: { translation: en },
         },
         fallbackLng: 'sq',         // default if detection fails
         interpolation: {
