@@ -78,7 +78,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                             handleAddToCart(product);
                         }}
                         disabled={isOutOfStock}
-                        className={`cursor-pointer font-semibold p-3 transition-all duration-300 ${
+                        className={`cursor-pointer font-semibold p-2 transition-all duration-300 ${
                             isOutOfStock
                                 ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
                                 : 'bg-blue-300 text-black shadow-md  hover:bg-blue-400 hover:text-white'
