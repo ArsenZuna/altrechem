@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCartStore } from "../../store/CartStore";
 import { X, Minus, Plus, Trash2 } from "lucide-react";
+import {useTranslation} from "react-i18next";
 
 interface CartSidebarProps {
     isOpen: boolean;
@@ -15,6 +16,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => 
     const decrementQuantity = useCartStore((s) => s.decrementQuantity);
     const total = useCartStore((s) => s.totalPrice());
     const navigate = useNavigate();
+    const {t} = useTranslation();
 
     return (
         <>
@@ -31,12 +33,12 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => 
                 } md:translate-x-0 z-50 shadow-xl p-4 overflow-y-auto`}
             >
                 <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-lg font-semibold">Your Cart</h2>
+                    <h2 className="text-lg font-semibold">{t("cart.0.header")}</h2>
                     <X className="cursor-pointer" onClick={onClose} />
                 </div>
 
                 {cartItems.length === 0 ? (
-                    <p className="text-gray-500">Your cart is empty.</p>
+                    <p className="text-gray-500">{t("order.0.empty.0.text")}.</p>
                 ) : (
                     <div className="space-y-4">
                         {cartItems.map((item) => {
@@ -96,7 +98,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => 
                             }}
                             className="w-full mt-2 bg-blue-300 text-black py-2 text-md font-semibold hover:bg-blue-400 transition-all"
                         >
-                            Go to Checkout
+                            {t("order.0.empty.0.button")}
                         </button>
                     </div>
                 )}

@@ -71,7 +71,7 @@ export const ClientProfile = () => {
             <div className="space-y-4 mb-10">
                 <div>
                     <h4 className="text-sm text-gray-500">{t("profile.0.name")}</h4>
-                    <p className="text-lg font-semibold">{user.name}</p>
+                    <p className="text-lg font-semibold">{user.name} {user.lastname}</p>
                 </div>
 
                 <div>

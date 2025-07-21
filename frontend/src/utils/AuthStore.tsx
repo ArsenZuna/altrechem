@@ -5,6 +5,7 @@ import { create } from 'zustand';
 export interface UserData {
     _id:   string;
     name:  string;
+    lastname: string;
     email: string;
     role:  'admin' | 'client';
     token: string;
