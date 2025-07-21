@@ -1,24 +1,23 @@
 import {Layout} from "../utils/Layout.tsx";
 import {PageIntro} from "../components/PageIntro.tsx";
+import {useTranslation} from "react-i18next";
 
 
 export const Contact = () => {
+    const {t} = useTranslation();
+
     return (
         <Layout>
-            <PageIntro title='Contact' />
+            <PageIntro title={t("contact.0.header")} />
             <>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 pt-20 pb-20 mx-32'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-4 my-16 md:mx-32 lg:my-24'>
                     <div className='flex flex-col justify-center gap-5'>
-                        <h2 className='text-4xl font-semibold text-pink-400/70 text-start'>Na vizitoni</h2>
+                        <h2 className='text-4xl font-semibold text-pink-400/70 text-start'>{t("contact.0.text.0.header")}</h2>
                         <p className='text-lg text-shadow-xs text-justify tracking-tight'>
-                            Tregti me pakice dhe shumice i produkteve ushqimore, cajra, erza,dhe paketimi i tyre,
-                            ekstraktime te bimeve medicinale dhe import eksport. Prodhim te vajrave te ndryshme bimore
-                            me presim te ftohte si vaj ulliri, kungulli, sinapi, hudhre, kokosi, luledielli, basani etj.
-                            Vajra bimore me distilim, rigon, livando, sherebele etj. Laborator per analiza te bimeve dhe mjekesor,
-                            kremra bimore, shampo me vajra bimore, perpunime produkteve bujqesore. Sherbime te mjeksise popullore.
-                            Klinike mjeksore, laborator mjeksor, sherbime kurative. Kryen cdo veprim tjeter qe lidhet me prodhimin,
-                            perpunimin dhe tregtimin ne fushen e produkteve bujqesore ne teresi dhe vecanerisht bimeve mjekesore,
-                            ne perputhje me legjislacionin shqiptar ne fuqi. Marketing online (shitblerje online).
+                            {t("contact.0.text.0.location")}
+                        </p>
+                        <p className='text-lg text-shadow-xs text-justify tracking-tight'>
+                            {t("contact.0.text.0.phone")}
                         </p>
                     </div>
                     <div className='flex justify-center items-center'>

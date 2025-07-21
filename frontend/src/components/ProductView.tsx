@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "../api/API";
 import { useCartStore } from "../store/CartStore.tsx";
+import {useTranslation} from "react-i18next";
 
 interface Product {
     _id: string;
@@ -20,6 +21,7 @@ export const ProductView = () => {
     const [mainImage, setMainImage] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const {t} = useTranslation();
 
     useEffect(() => {
         if (!productId) return;
@@ -78,7 +80,6 @@ export const ProductView = () => {
                     ))}
                 </div>
 
-                {/* Main Image */}
                 <div>
                     <img
                         src={mainImage || product.images[0]?.url}
@@ -106,7 +107,7 @@ export const ProductView = () => {
 
                 {product.isOnSale && (
                     <span className="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded">
-                        On Sale
+                        {t("featured_products.0.sale")}
                     </span>
                 )}
 
@@ -115,7 +116,7 @@ export const ProductView = () => {
                         onClick={() => handleAddToCart(product)}
                         className="cursor-pointer bg-blue-300 text-black font-semibold p-3 shadow-md hover:bg-blue-400 hover:text-white transition-all duration-300"
                     >
-                        Add To Cart
+                        {t("add_to_cart.0.button")}
                     </button>
                 </div>
             </div>

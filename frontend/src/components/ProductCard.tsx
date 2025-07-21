@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCartStore } from "../store/CartStore.tsx";
 import { Check } from "lucide-react";
 import type { Product } from "../utils/types.tsx";
+import {useTranslation} from "react-i18next";
 
 interface ProductCardProps {
     product: Product;
@@ -11,6 +12,7 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const navigate = useNavigate();
     const [showAlert, setShowAlert] = useState(false);
+    const { t } = useTranslation();
 
     const isOutOfStock = product.countInStock === 0;
 
@@ -38,7 +40,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         role="alert"
                     >
                         <Check size={16} className="mr-2" />
-                        <span className="font-medium">Added to cart!</span>
+                        <span className="font-medium">{t("add_to_cart.1.alert")}!</span>
                     </div>
                 </div>
             )}
@@ -50,7 +52,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                     className={`object-cover ${isOutOfStock ? 'grayscale opacity-70' : 'hover:opacity-90'}`}
                 />
                 {product.isOnSale && product.salePrice !== undefined && !isOutOfStock && (
-                    <span className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded shadow-md">On Sale</span>
+                    <span className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded shadow-md">{t("featured_products.0.sale")}</span>
                 )}
             </div>
 

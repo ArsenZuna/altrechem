@@ -1,9 +1,9 @@
 // components/CartSummary.tsx
 import { Trash2 } from 'lucide-react';
 
-export const CartSummary = ({ cartItems, totalPrice, addToCart, decrementQuantity, removeFromCart }: any) => (
+export const CartSummary = ({ cartItems, totalPrice, addToCart, decrementQuantity, removeFromCart, t }: any) => (
     <div>
-        <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
+        <h2 className="text-xl font-semibold mb-4">{t("order.0.cart.0.header")}</h2>
         <div className='space-y-4'>
             {cartItems.map((item: any) => (
                 <div key={item._id} className='flex space-x-4'>
@@ -44,7 +44,7 @@ export const CartSummary = ({ cartItems, totalPrice, addToCart, decrementQuantit
                     <span>Subtotal:</span><span>{totalPrice()} ALL</span>
                 </p>
                 <p className="flex justify-between text-sm text-gray-600">
-                    <span>Shipping:</span><span>{totalPrice() > 5000 ? "Free" : "300 ALL"}</span>
+                    <span>{t("order.0.cart.1.shipping")}:</span><span>{totalPrice() > 5000 ? "Free" : "300 ALL"}</span>
                 </p>
                 <p className="flex justify-between font-bold text-lg mt-2">
                     <span>Total:</span><span>{totalPrice() + (totalPrice() > 5000 ? 0 : 300)} ALL</span>

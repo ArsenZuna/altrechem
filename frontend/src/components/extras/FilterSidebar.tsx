@@ -1,6 +1,6 @@
-// src/components/FilterSidebar.tsx
 import React from "react";
 import { X } from "lucide-react";
+import {useTranslation} from "react-i18next";
 
 interface Props {
     categories: string[];
@@ -23,6 +23,7 @@ export const FilterSidebar: React.FC<Props> = ({
                                                    onSaleToggle,
                                                    onClose,
                                                }) => {
+    const {t} = useTranslation();
     const handleCheckboxChange = (category: string) => {
         if (selectedCategories.includes(category)) {
             onCategoryChange(selectedCategories.filter(c => c !== category));
@@ -40,7 +41,7 @@ export const FilterSidebar: React.FC<Props> = ({
             )}
 
             <div>
-                <h4 className="font-semibold mb-2">Categories</h4>
+                <h4 className="font-semibold mb-2">{t("shop.0.sidebar.0.categories")}</h4>
                 <div className="space-y-2">
                     {categories.map((category) => (
                         <label key={category} className="flex items-center gap-2">
@@ -56,7 +57,7 @@ export const FilterSidebar: React.FC<Props> = ({
             </div>
 
             <div>
-                <h4 className="font-semibold mb-2">Price Range</h4>
+                <h4 className="font-semibold mb-2">{t("shop.0.sidebar.0.price")}</h4>
                 <div className="flex items-center gap-2">
                     <input
                         type="number"
@@ -87,7 +88,7 @@ export const FilterSidebar: React.FC<Props> = ({
                     onChange={onSaleToggle}
                     id="sale"
                 />
-                <label htmlFor="sale" className="text-sm">Show Sale Items Only</label>
+                <label htmlFor="sale" className="text-sm">{t("shop.0.sidebar.0.sale")}</label>
             </div>
         </div>
     );

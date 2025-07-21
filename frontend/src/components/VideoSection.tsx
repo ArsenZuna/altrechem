@@ -5,9 +5,11 @@ import {ModalVideo} from './extras/ModalVideo.tsx';
 import {Play} from 'lucide-react';
 import Background from '../assets/natural_cosmetics.jpg';
 import {InstagramEmbed} from "react-social-media-embed";
+import {useTranslation} from "react-i18next";
 
 export const VideoSection = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const {t} = useTranslation();
 
     return (
         <motion.section
@@ -29,16 +31,9 @@ export const VideoSection = () => {
                             variants={fadeIn('down')}
                             className="text-3xl lg:text-6xl leading-[1.1] -tracking-[1.5px] capitalize mb-8"
                         >
-                            Altrechem Media
+                            {t("video_section.0.header")}
                         </motion.h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <p>{t("video_section.0.description")}</p>
                         <motion.div variants={fadeIn('down')}>
                             <div
                                 onClick={() => setIsOpen(true)}
@@ -51,7 +46,7 @@ export const VideoSection = () => {
                                         <Play className="text-white"/>
                                     </div>
                                 </div>
-                                <div className="uppercase font-semibold">Shiko</div>
+                                <div className="uppercase font-semibold">{t("video_section.0.button_desc")}</div>
                             </div>
                         </motion.div>
 
@@ -61,7 +56,7 @@ export const VideoSection = () => {
                             videoSrc="https://youtu.be/0cOdnLsD0ho"
                         />
                     </div>
-                    <div className='hidden md:block col-span-1 ml-16 mb-8 lg:mb-0'>
+                    <div className='hidden lg:block col-span-1 ml-16 mb-8 lg:mb-0'>
                         <div>
                             <InstagramEmbed
                                 url="https://www.instagram.com/reel/DEnf31QtGJW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="

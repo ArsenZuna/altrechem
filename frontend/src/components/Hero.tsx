@@ -3,13 +3,15 @@ import second_hero from '../assets/second_hero.jpg';
 import third_hero from '../assets/third_hero.jpg';
 import fourth_hero from '../assets/fourth_hero.png';
 import {Carousel} from './extras/Carousel.tsx';
+import {useTranslation} from "react-i18next";
 
 export const Hero = () => {
     const images = [first_hero, second_hero, third_hero];
+    const {t} = useTranslation();
     const captions = [
-        <span>Miresevini ne Altrechem</span>,
-        <span>Mjekime efektive</span>,
-        <span>Pa efekte anesore</span>,
+        <span>{t("hero.0")}</span>,
+        <span>{t("hero.1")}</span>,
+        <span>{t("hero.2")}</span>,
     ];
 
     return (

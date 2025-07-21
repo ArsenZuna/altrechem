@@ -2,10 +2,12 @@ import {Facebook, Instagram, Youtube} from 'lucide-react';
 import {motion} from 'framer-motion';
 import Logo from '../assets/logo.png';
 import {getContainerVariants, getItemVariants} from "../utils/Variants.tsx";
+import {useTranslation} from "react-i18next";
 
 export const Footer = () => {
     const container = getContainerVariants();
     const item = getItemVariants();
+    const {t} = useTranslation();
 
     const facebookButton = () => {
         window.open('https://www.facebook.com/profile.php?id=61571221151288', '_blank');
@@ -33,13 +35,7 @@ export const Footer = () => {
                         variants={item}
                         className='col-span-2 hidden md:flex justify-center items-center'>
                         <img src={Logo} alt="Logo" className="w-52 h-52"/>
-                        <p className='ml-16'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-                        </p>
+                        <p className='ml-16 hidden lg:flex'>{t("footer")}</p>
                     </motion.div>
 
                     <motion.div

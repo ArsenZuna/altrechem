@@ -1,0 +1,173 @@
+{
+  "hero": [
+    "Welcome to AltreChem",
+    "Effective Treatments",
+    "No Side Effects"
+  ],
+  "features": [
+    "Certified Brand",
+    "100% Herbal",
+    "Cash On Delivery",
+    "Fast Delivery"
+  ],
+  "featured_products": [
+    {
+      "header": "Featured Products",
+      "sale": "On Sale"
+    }
+  ],
+  "video_section": [
+    {
+      "header": "AltreChem Media",
+      "description": "AltreChem is a health-focused company that develops effective natural treatments for a variety of common issues, ranging from bad breath to stomach aches. By combining traditional botanical knowledge with modern scientific processes, AltreChem creates safe and reliable solutions that support overall wellness. Their products are designed to relieve discomfort, improve digestive health, and promote better oral hygiene, using carefully selected plant-based ingredients known for their soothing and therapeutic properties.",
+      "button_desc": "Watch"
+    }
+  ],
+  "reviews": [
+    {
+      "header": "Reviews"
+    },
+    {
+      "text": "I've struggled with bad breath for years and tried everything from mouthwashes to sprays. AltreChem’s herbal formula was the first thing that actually worked long-term. It feels clean, natural, and the freshness lasts all day. I’m really impressed!",
+      "role": "Client"
+    },
+    {
+      "text": "I started using one of AltreChem’s digestive supplements a few weeks ago after constant stomach aches. Within days, I noticed a big difference—less bloating, no pain, and I just feel more balanced overall. Highly recommend if you’re looking for a gentle, effective solution.",
+      "role": "Client"
+    },
+    {
+      "text": "What I love about AltreChem is that their products actually do what they promise without any harsh chemicals. The quality is obvious from the packaging to the results. It’s rare to find a company that stays so true to natural healing.",
+      "role": "Client"
+    }
+  ],
+  "about": [
+    {
+      "header": "About",
+      "text": "Retail and wholesale trade of food products, teas, spices, and their packaging, extraction of medicinal herbs and import-export. Production of various cold-pressed vegetable oils such as olive oil, pumpkin, mustard, garlic, coconut, sunflower, basani, etc. Distilled vegetable oils, oregano, lavender, sage, etc. Laboratory for herbal and medicinal analysis, herbal creams, shampoos with herbal oils, processing of agricultural products. Traditional medicine services. Medical clinic, medical laboratory, curative services. Performs any other action related to the production, processing and trading in the field of agricultural products in general and medicinal herbs in particular, in accordance with the Albanian legislation in force. Online marketing (online sales)."
+    }
+  ],
+  "contact": [
+    {
+      "header": "Contact",
+      "text": [
+        {
+          "header": "Contact Us",
+          "location": "You can visit us at our address at Aleksandër Moisiu St., Tiranë",
+          "phone": "Or reach out to us by calling at: +355699967356."
+        }
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "sidebar": [
+        {
+          "categories": "Categories",
+          "price": "Price Range",
+          "sale": "Show Sale Items Only"
+        }
+      ]
+    },
+    {
+      "sorting": {
+        "first_option": "Name: A to Z",
+        "second_option": "Price: Low to High",
+        "third_option": "Price: High to Low"
+      }
+    }
+  ],
+  "cart": [
+    {
+      "header": "Your Cart"
+    },
+    {
+      "button": "Go To Checkout"
+    }
+  ],
+  "order": [
+    {
+      "header": "Order Details",
+      "input": [
+        {
+          "address": "Address"
+        },
+        {
+          "country": [
+            {
+              "text": "Country",
+              "placeholder": "Select a country"
+            }
+          ]
+        },
+        {
+          "city": "City"
+        },
+        {
+          "postal": "Postal Code"
+        },
+        {
+          "payment": [
+            {
+              "text": "Payment Method",
+              "option": "Cash on Delivery"
+            }
+          ]
+        }
+      ],
+      "cart": [
+        {
+          "header": "Your Cart"
+        },
+        {
+          "shipping": "Shipping"
+        }
+      ],
+      "empty": [
+        {
+          "text": "Your cart is empty",
+          "button": "Start Shopping"
+        }
+      ]
+    }
+  ],
+  "profile": [
+    {
+      "header": "Client Profile",
+      "name": "Full Name",
+      "email": "Email Address",
+      "role": "Role"
+    },
+    {
+      "table": [
+        {
+          "header": "Your Orders",
+          "no_orders": "You haven't placed any orders yet",
+          "id": "Order ID",
+          "date": "Date",
+          "total": "Total",
+          "paid": "Paid",
+          "delivered": "Delivered"
+        }
+      ]
+    },
+    {
+      "buttons": [
+        {
+          "return": "Return to Homepage"
+        },
+        {
+          "logout": "Logout"
+        }
+      ]
+    }
+  ],
+  "add_to_cart": [
+    {
+      "button": "Add To Cart"
+    },
+    {
+      "alert": "Added to cart"
+    }
+  ],
+  "footer": "AltreChem is a health-focused company that develops effective natural treatments for a variety of common issues, ranging from bad breath to stomach aches. By combining traditional botanical knowledge with modern scientific processes, AltreChem creates safe and reliable solutions that support overall wellness. Their products are designed to relieve discomfort, improve digestive health, and promote better oral hygiene, using carefully selected plant-based ingredients known for their soothing and therapeutic properties."
+}

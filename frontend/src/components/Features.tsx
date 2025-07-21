@@ -1,10 +1,12 @@
 import {motion} from 'framer-motion';
 import {getContainerVariants, getItemVariants} from "../utils/Variants.tsx";
 import {Vegan, BadgeCheck, Truck, HandCoins} from "lucide-react";
+import {useTranslation} from "react-i18next";
 
 export const Features = () => {
     const container = getContainerVariants();
     const item = getItemVariants();
+    const {t} = useTranslation();
 
     return (
         <div className='container mx-auto w-full p-10'>
@@ -21,7 +23,7 @@ export const Features = () => {
                             <BadgeCheck size={65} strokeWidth={1}/>
                         </div>
                     </div>
-                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>Markë e Çertifikuar</h3>
+                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>{t("features.0")}</h3>
                 </motion.div>
                 <motion.div
                     variants={item}
@@ -31,7 +33,7 @@ export const Features = () => {
                             <Vegan size={65} strokeWidth={1}/>
                         </div>
                     </div>
-                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>100% Bimor</h3>
+                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>{t("features.1")}</h3>
                 </motion.div>
                 <motion.div
                     variants={item}
@@ -41,7 +43,7 @@ export const Features = () => {
                             <HandCoins size={65} strokeWidth={1}/>
                         </div>
                     </div>
-                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>Paguaj në Dorëzim</h3>
+                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>{t("features.2")}</h3>
                 </motion.div>
                 <motion.div
                     variants={item}
@@ -51,7 +53,7 @@ export const Features = () => {
                             <Truck size={65} strokeWidth={1}/>
                         </div>
                     </div>
-                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>Dërgesë e Shpejtë</h3>
+                    <h3 className='text-black text-lg md:text-2xl font-semibold text-center pt-2 text-shadow-xs'>{t("features.3")}</h3>
                 </motion.div>
             </motion.div>
         </div>

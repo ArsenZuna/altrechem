@@ -1,0 +1,173 @@
+{
+  "hero": [
+    "Mirësevini në AltreChem",
+    "Trajtime Efektive",
+    "Pa Efekte Anësore"
+  ],
+  "features": [
+    "Markë e Certifikuar",
+    "100% Bimore",
+    "Pagesë në Dorëzim",
+    "Dërgesë e Shpejtë"
+  ],
+  "featured_products": [
+    {
+      "header": "Produktet e Veçuara",
+      "sale": "Në Ofertë"
+    }
+  ],
+  "video_section": [
+    {
+      "header": "Media AltreChem",
+      "description": "AltreChem është një kompani e përqendruar në shëndetësi që zhvillon trajtime natyrale efektive për një sërë problemesh të zakonshme, që variojnë nga era e keqe e gojës deri te dhimbjet e stomakut. Duke kombinuar njohuritë tradicionale bimore me proceset shkencore moderne, AltreChem krijon zgjidhje të sigurta dhe të besueshme që mbështesin mirëqenien e përgjithshme. Produktet e tyre janë të dizajnuara për të lehtësuar shqetësimet, për të përmirësuar shëndetin tretës dhe për të promovuar higjienën orale, duke përdorur përbërës bimorë të përzgjedhur me kujdes për vetitë e tyre qetësuese dhe terapeutike.",
+      "button_desc": "Shiko"
+    }
+  ],
+  "reviews": [
+    {
+      "header": "Vlerësimet"
+    },
+    {
+      "text": "Kam vuajtur nga era e keqe e gojës për vite me radhë dhe kam provuar gjithçka, nga shpëlarësit deri te spërkatësit. Formula bimore e AltreChem ishte e para që funksionoi në mënyrë afatgjatë. Ndjesia është e pastër, natyrale dhe freskia zgjat gjatë gjithë ditës. Jam shumë i kënaqur!",
+      "role": "Klient"
+    },
+    {
+      "text": "Nisa të përdor një nga suplementet tretëse të AltreChem disa javë më parë pas dhimbjeve të vazhdueshme të barkut. Brenda pak ditësh vura re ndryshim të madh—më pak fryrje, asnjë dhimbje dhe ndjehem më i balancuar në përgjithësi. E rekomandoj shumë nëse kërkoni një zgjidhje të butë dhe efektive.",
+      "role": "Klient"
+    },
+    {
+      "text": "Ajo që më pëlqen tek AltreChem është se produktet e tyre bëjnë pikërisht atë që premtojnë, pa kimikate të ashpra. Cilësia është e dukshme që nga paketimi deri te rezultatet. Është e rrallë të gjesh një kompani që mbetet kaq besnike ndaj shërimit natyral.",
+      "role": "Klient"
+    }
+  ],
+  "about": [
+    {
+      "header": "Rreth Nesh",
+      "text": "Tregti me pakicë dhe shumicë e produkteve ushqimore, çajrave, erëzave dhe ambalazhimit të tyre, mbledhja e bimëve mjekësore dhe import-eksporti. Prodhimi i vajrave vegjetalë të ftohtë të shtypur si: vaj ulliri, kungulli, mustarde, hudhre, kokosi, luledielli, basani, etj. Vajra vegjetalë të distiluar: rigon, livando, sherebelë, etj. Laborator për analizat bimore dhe mjekësore, kremra bimore, shampo me vajra bimore, përpunim i produkteve bujqësore. Shërbime të mjekësisë tradicionale. Klinikë mjekësore, laborator mjekësor, shërbime kurative. Kryen çdo veprim tjetër që ka të bëjë me prodhimin, përpunimin dhe tregtimin në fushën e produkteve bujqësore në përgjithësi dhe të bimëve mjekësore në veçanti, në përputhje me legjislacionin shqiptar në fuqi. Marketing online (shitje online)."
+    }
+  ],
+  "contact": [
+    {
+      "header": "Kontakt",
+      "text": [
+        {
+          "header": "Na Kontaktoni",
+          "location": "Mund të na vizitoni në adresën tonë në Rr. Aleksandër Moisiu, Tiranë",
+          "phone": "Ose na kontaktoni në numrin: +355699967356."
+        }
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "sidebar": [
+        {
+          "categories": "Kategoritë",
+          "price": "Gama e Çmimit",
+          "sale": "Shfaq vetëm produktet në ofertë"
+        }
+      ]
+    },
+    {
+      "sorting": {
+        "first_option": "Emri: A në Zh",
+        "second_option": "Çmimi: Nga më i ulëti",
+        "third_option": "Çmimi: Nga më i larti"
+      }
+    }
+  ],
+  "cart": [
+    {
+      "header": "Shporta Juaj"
+    },
+    {
+      "button": "Vazhdo me Porosinë"
+    }
+  ],
+  "order": [
+    {
+      "header": "Detajet e Porosisë",
+      "input": [
+        {
+          "address": "Adresa"
+        },
+        {
+          "country": [
+            {
+              "text": "Shteti",
+              "placeholder": "Zgjidh një shtet"
+            }
+          ]
+        },
+        {
+          "city": "Qyteti"
+        },
+        {
+          "postal": "Kodi Postar"
+        },
+        {
+          "payment": [
+            {
+              "text": "Mënyra e Pagesës",
+              "option": "Pagesë në Dorëzim"
+            }
+          ]
+        }
+      ],
+      "cart": [
+        {
+          "header": "Shporta Juaj"
+        },
+        {
+          "shipping": "Transporti"
+        }
+      ],
+      "empty": [
+        {
+          "text": "Shporta juaj është bosh",
+          "button": "Fillo Blerjen"
+        }
+      ]
+    }
+  ],
+  "profile": [
+    {
+      "header": "Profili i Klientit",
+      "name": "Emri i Plotë",
+      "email": "Adresa e Email-it",
+      "role": "Roli"
+    },
+    {
+      "table": [
+        {
+          "header": "Porositë Tuaja",
+          "no_orders": "Ende nuk keni bërë asnjë porosi",
+          "id": "ID e Porosisë",
+          "date": "Data",
+          "total": "Totali",
+          "paid": "E Paguar",
+          "delivered": "E Dorëzuar"
+        }
+      ]
+    },
+    {
+      "buttons": [
+        {
+          "return": "Kthehu në Faqen Kryesore"
+        },
+        {
+          "logout": "Dil"
+        }
+      ]
+    }
+  ],
+  "add_to_cart": [
+    {
+      "button": "Shto në Shportë"
+    },
+    {
+      "alert": "U shtua në shportë"
+    }
+  ],
+  "footer": "AltreChem është një kompani e përqendruar në shëndetësi që zhvillon trajtime natyrale efektive për një sërë problemesh të zakonshme, që variojnë nga era e keqe e gojës deri te dhimbjet e stomakut. Duke kombinuar njohuritë tradicionale bimore me proceset shkencore moderne, AltreChem krijon zgjidhje të sigurta dhe të besueshme që mbështesin mirëqenien e përgjithshme. Produktet e tyre janë të dizajnuara për të lehtësuar shqetësimet, për të përmirësuar shëndetin tretës dhe për të promovuar higjienën orale, duke përdorur përbërës bimorë të përzgjedhur me kujdes për vetitë e tyre qetësuese dhe terapeutike."
+}

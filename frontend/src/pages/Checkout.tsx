@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {API} from "../api/API";
 import {OrderForm} from "../components/extras/OrderForm.tsx";
 import {CartSummary} from "../components/CartSummary.tsx";
+import {useTranslation} from "react-i18next";
 
 export const Checkout = () => {
     const {user} = useAuthStore();
@@ -20,6 +21,7 @@ export const Checkout = () => {
     const [paymentMethod, setPaymentMethod] = useState('Cash on Delivery');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const {t} = useTranslation();
 
     const handleOrderSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -76,8 +78,8 @@ export const Checkout = () => {
         <div className='flex justify-center m-5 pl-6 md:pl-0 lg:pt-44'>
             {cartItems.length === 0 ? (
                 <div className='flex flex-col justify-center items-center gap-5'>
-                    <p className='text-xl font-semibold'>Your cart is empty...</p>
-                    <button className='cursor-pointer text-2xl font-semibold bg-pink-300 hover:bg-pink-400 text-white p-5' onClick={goToShop}>Start Shopping</button>
+                    <p className='text-xl font-semibold'>{t("order.0.empty.0.text")}</p>
+                    <button className='cursor-pointer text-2xl font-semibold bg-pink-300 hover:bg-pink-400 text-white p-5' onClick={goToShop}>{t("order.0.empty.0.button")}</button>
                 </div>
             ) : (
                 <div className='container w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-5'>
@@ -99,6 +101,7 @@ export const Checkout = () => {
                             addToCart={useCartStore.getState().addToCart}
                             decrementQuantity={useCartStore.getState().decrementQuantity}
                             removeFromCart={removeFromCart}
+                            t={t}
                         />
                     </div>
                 </div>

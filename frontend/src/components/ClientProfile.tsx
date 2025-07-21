@@ -1,7 +1,8 @@
 import {useAuthStore} from '../utils/AuthStore';
 import {useNavigate} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {API} from '../api/API'; // adjust to your actual API config
+import {API} from '../api/API';
+import {useTranslation} from "react-i18next";
 
 interface OrderItem {
     _id: string;
@@ -15,6 +16,7 @@ export const ClientProfile = () => {
     const user = useAuthStore((s) => s.user);
     const logout = useAuthStore((s) => s.logout);
     const navigate = useNavigate();
+    const {t} = useTranslation();
 
     const [orders, setOrders] = useState<OrderItem[]>([]);
     const [loading, setLoading] = useState(true);
@@ -64,43 +66,43 @@ export const ClientProfile = () => {
 
     return (
         <div className="max-w-4xl mx-auto mt-32 p-8 bg-white shadow-md rounded-lg">
-            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Client Profile</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">{t("profile.0.header")}</h2>
 
             <div className="space-y-4 mb-10">
                 <div>
-                    <h4 className="text-sm text-gray-500">Full Name</h4>
+                    <h4 className="text-sm text-gray-500">{t("profile.0.name")}</h4>
                     <p className="text-lg font-semibold">{user.name}</p>
                 </div>
 
                 <div>
-                    <h4 className="text-sm text-gray-500">Email Address</h4>
+                    <h4 className="text-sm text-gray-500">{t("profile.0.email")}</h4>
                     <p className="text-lg font-semibold">{user.email}</p>
                 </div>
 
                 <div>
-                    <h4 className="text-sm text-gray-500">Role</h4>
+                    <h4 className="text-sm text-gray-500">{t("profile.0.role")}</h4>
                     <p className="text-lg font-semibold capitalize">{user.role}</p>
                 </div>
             </div>
 
             <div>
-                <h3 className="text-2xl font-semibold mb-4 text-gray-700">Your Orders</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gray-700">{t("profile.1.table.0.header")}</h3>
                 {loading ? (
                     <p>Loading orders...</p>
                 ) : error ? (
                     <p className="text-red-600">{error}</p>
                 ) : orders.length === 0 ? (
-                    <p className="text-gray-600">You haven't placed any orders yet.</p>
+                    <p className="text-gray-600">{t("profile.1.table.0.no_orders")}</p>
                 ) : (
                     <div className="overflow-x-auto">
                         <table className="min-w-full text-sm border border-gray-200">
                             <thead className="bg-gray-100 text-left">
                             <tr>
-                                <th className="px-4 py-2">Order ID</th>
-                                <th className="px-4 py-2">Date</th>
-                                <th className="px-4 py-2">Total</th>
-                                <th className="px-4 py-2">Paid</th>
-                                <th className="px-4 py-2">Delivered</th>
+                                <th className="px-4 py-2">{t("profile.1.table.0.id")}</th>
+                                <th className="px-4 py-2">{t("profile.1.table.0.date")}</th>
+                                <th className="px-4 py-2">{t("profile.1.table.0.total")}</th>
+                                <th className="px-4 py-2">{t("profile.1.table.0.paid")}</th>
+                                <th className="px-4 py-2">{t("profile.1.table.0.delivered")}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -125,7 +127,7 @@ export const ClientProfile = () => {
                         onClick={goToHome}
                         className="px-6 py-2 bg-pink-300 text-white rounded hover:bg-pink-400 transition"
                     >
-                        Return to Homepage
+                        {t("profile.2.buttons.0.return")}
                     </button>
                 </div>
                 <div className="mt-10 text-center">
@@ -133,7 +135,7 @@ export const ClientProfile = () => {
                         onClick={handleLogout}
                         className="px-6 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
                     >
-                        Logout
+                        {t("profile.2.buttons.1.logout")}
                     </button>
                 </div>
             </div>

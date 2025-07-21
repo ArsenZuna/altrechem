@@ -7,6 +7,7 @@ import type {Product} from "../utils/types.tsx";
 import {ProductCard} from "../components/ProductCard";
 import {FilterSidebar} from "../components/extras/FilterSidebar";
 import {Funnel} from "lucide-react";
+import {useTranslation} from "react-i18next";
 
 export const Shop = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -19,6 +20,7 @@ export const Shop = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const {t} = useTranslation();
 
     useEffect(() => {
         API.get<Product[]>('/api/products')
@@ -104,9 +106,9 @@ export const Shop = () => {
                             onChange={(e) => setSortOption(e.target.value)}
                             className="border border-gray-300 px-2 py-1 rounded"
                         >
-                            <option>Name: A to Z</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
+                            <option>{t("shop.1.sorting.first_option")}</option>
+                            <option>{t("shop.1.sorting.second_option")}</option>
+                            <option>{t("shop.1.sorting.third_option")}</option>
                         </select>
                     </div>
                     <div className="flex md:block justify-center items-center mb-4 pb-3">
