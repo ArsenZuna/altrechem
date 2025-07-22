@@ -170,5 +170,32 @@
       "alert": "U shtua në shportë"
     }
   ],
-  "footer": "AltreChem është një kompani e përqendruar në shëndetësi që zhvillon trajtime natyrale efektive për një sërë problemesh të zakonshme, që variojnë nga era e keqe e gojës deri te dhimbjet e stomakut. Duke kombinuar njohuritë tradicionale bimore me proceset shkencore moderne, AltreChem krijon zgjidhje të sigurta dhe të besueshme që mbështesin mirëqenien e përgjithshme. Produktet e tyre janë të dizajnuara për të lehtësuar shqetësimet, për të përmirësuar shëndetin tretës dhe për të promovuar higjienën orale, duke përdorur përbërës bimorë të përzgjedhur me kujdes për vetitë e tyre qetësuese dhe terapeutike."
+  "footer": "AltreChem është një kompani e përqendruar në shëndetësi që zhvillon trajtime natyrale efektive për një sërë problemesh të zakonshme, që variojnë nga era e keqe e gojës deri te dhimbjet e stomakut. Duke kombinuar njohuritë tradicionale bimore me proceset shkencore moderne, AltreChem krijon zgjidhje të sigurta dhe të besueshme që mbështesin mirëqenien e përgjithshme. Produktet e tyre janë të dizajnuara për të lehtësuar shqetësimet, për të përmirësuar shëndetin tretës dhe për të promovuar higjienën orale, duke përdorur përbërës bimorë të përzgjedhur me kujdes për vetitë e tyre qetësuese dhe terapeutike.",
+  "login": [
+    {
+      "header": "Mirë se Vini!",
+      "email_placeholder": "Vendosni emailin tuaj",
+      "button": "Futuni",
+      "go_to_register": "Krijoni një llogari"
+    }
+  ],
+  "register": [
+    {
+      "header": "Krijoni një Llogari",
+      "input": {
+        "name": "Emri",
+        "lastname": "Mbiemri",
+        "email": "Email",
+        "confirm_password": "Konfirmo Password",
+        "country": "Zgjidhni një shtet",
+        "city": "Zgjidhni një qytet",
+        "address": "Adresa",
+        "phone": "Telefoni"
+      }
+    },
+    {
+      "button": "Krijo Llogarinë",
+      "go_to_login": "E keni një llogari? Futuni"
+    }
+  ]
 }

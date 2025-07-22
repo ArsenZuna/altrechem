@@ -12,24 +12,20 @@ connectDB();
 
 const app = express();
 
- // Enable CORS for our React frontend
  app.use(cors({
-   origin: 'https://altrechem.netlify.app',  // adjust if your front runs elsewhere
+  origin: 'https://altrechem.netlify.app', 
    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
    allowedHeaders: ['Content-Type','Authorization']
 }));
 app.use(express.json());
 
-// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 
-// Serve uploads
 app.use('/uploads', express.static('uploads'));
 app.use('/uploads/products', express.static('uploads/products'));
 
-// Error handlers
 app.use(notFound);
 app.use(errorHandler);
 

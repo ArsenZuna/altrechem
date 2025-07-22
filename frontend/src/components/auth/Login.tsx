@@ -1,9 +1,10 @@
-import { useState } from 'react';
+    import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useFormStatus } from 'react-dom';
 import { API } from '../../api/API.js';
 import { useAuthStore } from '../../utils/AuthStore.tsx';
 import dummy_image from '../../assets/fourth_hero.png';
+    import {useTranslation} from "react-i18next";
 
 export const Login = () => {
     const login = useAuthStore((state) => state.login);
@@ -12,6 +13,7 @@ export const Login = () => {
     const [error, setError] = useState(null);
     const { pending } = useFormStatus();
     const navigate = useNavigate();
+    const {t} = useTranslation();
 
     const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault();
@@ -47,7 +49,7 @@ export const Login = () => {
 
                         {/* Form side */}
                         <div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-                            <h3 className="pt-4 text-2xl text-center font-semibold">Welcome Back!</h3>
+                            <h3 className="pt-4 text-2xl text-center font-semibold">{t("login.0.header")}!</h3>
                             <form
                                 onSubmit={handleSubmit}
                                 className="px-8 pt-6 pb-8 mb-4 bg-white rounded"
@@ -69,7 +71,7 @@ export const Login = () => {
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Enter email"
+                                        placeholder={t("login.0.email_placeholder")}
                                         className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                                         required
                                     />
@@ -101,7 +103,7 @@ export const Login = () => {
                                         disabled={pending}
                                         className="w-full px-4 py-2 font-bold text-white bg-pink-400/70 rounded-full hover:bg-pink-400 focus:outline-none focus:shadow-outline"
                                     >
-                                        Sign In
+                                        {t("login.0.button")}
                                     </button>
                                 </div>
 
@@ -113,16 +115,8 @@ export const Login = () => {
                                         to="/register"
                                         className="inline-block text-sm text-pink-400 align-baseline hover:text-pink-600"
                                     >
-                                        Create an Account!
+                                        {t("login.0.go_to_register")}
                                     </Link>
-                                </div>
-                                <div className="text-center">
-                                    <a
-                                        href="#"
-                                        className="inline-block text-sm text-pink-400 align-baseline hover:text-pink-600"
-                                    >
-                                        Forgot Password?
-                                    </a>
                                 </div>
                             </form>
                         </div>

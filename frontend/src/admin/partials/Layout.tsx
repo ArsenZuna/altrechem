@@ -17,7 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 ☰
             </button>
 
-            <div className="flex justify-center">
+            <div className="flex lg:justify-center">
                 <div className="p-3">
                     <Sidebar
                         isOpen={isSidebarOpen}

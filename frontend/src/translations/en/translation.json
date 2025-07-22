@@ -170,5 +170,32 @@
       "alert": "Added to cart"
     }
   ],
-  "footer": "AltreChem is a health-focused company that develops effective natural treatments for a variety of common issues, ranging from bad breath to stomach aches. By combining traditional botanical knowledge with modern scientific processes, AltreChem creates safe and reliable solutions that support overall wellness. Their products are designed to relieve discomfort, improve digestive health, and promote better oral hygiene, using carefully selected plant-based ingredients known for their soothing and therapeutic properties."
+  "footer": "AltreChem is a health-focused company that develops effective natural treatments for a variety of common issues, ranging from bad breath to stomach aches. By combining traditional botanical knowledge with modern scientific processes, AltreChem creates safe and reliable solutions that support overall wellness. Their products are designed to relieve discomfort, improve digestive health, and promote better oral hygiene, using carefully selected plant-based ingredients known for their soothing and therapeutic properties.",
+  "login": [
+    {
+      "header": "Welcome Back!",
+      "email_placeholder": "Enter Email",
+      "button": "Sign In",
+      "go_to_register": "Create an Account"
+    }
+  ],
+  "register": [
+    {
+      "header": "Create an Account",
+      "input": {
+        "name": "Name",
+        "lastname": "Lastname",
+        "email": "Email",
+        "confirm_password": "Confirm Password",
+        "country": "Select a country",
+        "city": "Select a city",
+        "address": "Address",
+        "phone": "Phone"
+      }
+    },
+    {
+      "button": "Sign Up",
+      "go_to_login": "Already have an account? Login"
+    }
+  ]
 }
