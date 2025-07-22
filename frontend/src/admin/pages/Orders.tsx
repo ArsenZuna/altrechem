@@ -18,7 +18,7 @@ export const Orders = () => {
             <OrdersTable />
 
             {/* Add Product Button */}
-            <div className="flex justify-end mt-6 mr-5">
+            <div className="flex justify-start md:justify-end mt-6 mr-5">
                 <button
                     onClick={() => setIsModalOpen(true)}
                     className="text-xl text-black bg-pink-400/70 p-4 hover:bg-green-700 hover:text-white rounded"
