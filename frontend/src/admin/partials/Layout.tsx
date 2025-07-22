@@ -17,7 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 ☰
             </button>
 
-            <div className="flex lg:justify-center">
+            <div className="flex justify-center">
                 <div className="p-3">
                     <Sidebar
                         isOpen={isSidebarOpen}
@@ -25,7 +25,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     />
                 </div>
 
-                <div className="mx-10 w-full">
+                <div className="mx-5 md:mx-10 w-full">
                     {children}
                 </div>
             </div>
