@@ -74,7 +74,7 @@ export const OrderForm: React.FC<Props> = ({
                 </select>
             </div>
             <button type="submit" className="w-full bg-blue-300 hover:bg-blue-400 text-white py-2 rounded-xl font-semibold" disabled={loading}>
-                {loading ? 'Placing Order...' : 'Place Order'}
+                {loading ? 'Placing Order...' : `${t("order.0.button")}`}
             </button>
         </form>
     );

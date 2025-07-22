@@ -3,24 +3,24 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 // import translations
-import en from "../translations/en/translation.json"
 import sq from "../translations/sq/translation.json"
+import en from "../translations/en/translation.json"
 
 i18n
-    .use(LanguageDetector)       // auto‑detect language (from browser or path)
-    .use(initReactI18next)       // pass i18n instance to react-i18next
+    .use(LanguageDetector)
+    .use(initReactI18next)
     .init({
         resources: {
             sq: { translation: sq },
             en: { translation: en },
         },
-        fallbackLng: 'sq',         // default if detection fails
+        fallbackLng: 'sq',
         interpolation: {
-            escapeValue: false,      // React already escapes
+            escapeValue: false,
         },
         detection: {
-            // optional: customize detection order/sources
-            order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+            // only use cookie or localStorage (do NOT auto-detect browser language)
+            order: ['cookie', 'localStorage'],
             caches: ['cookie'],
         },
     });

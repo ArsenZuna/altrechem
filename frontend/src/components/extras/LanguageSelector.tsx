@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { Menu } from '@headlessui/react';
 import i18n from 'i18next';
 
-import enFlag from '../../assets/english.svg';
 import sqFlag from '../../assets/albanian.svg';
+import enFlag from '../../assets/english.svg';
 
 const languages = [
     { code: 'sq', label: 'Shqip', flag: sqFlag },

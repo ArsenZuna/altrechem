@@ -101,7 +101,7 @@ export const FinancesView: React.FC = () => {
                             {monthNames[month]} {year}
                         </h3>
                         <p className="text-green-600 text-md font-medium">
-                            Revenue: <span className="font-bold">{revenue.toFixed(2)} ALL</span>
+                            Revenue: <span className="font-bold">{revenue} ALL</span>
                         </p>
                         <p className="text-gray-800 text-md">
                             Products Sold: <span className="font-bold">{itemsSold}</span>

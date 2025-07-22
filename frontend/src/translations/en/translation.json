@@ -87,6 +87,7 @@
   "order": [
     {
       "header": "Order Details",
+      "button": "Place Order",
       "input": [
         {
           "address": "Address"

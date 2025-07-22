@@ -87,6 +87,7 @@
   "order": [
     {
       "header": "Detajet e Porosisë",
+      "button": "Kryeni Porosinë",
       "input": [
         {
           "address": "Adresa"
