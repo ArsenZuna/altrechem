@@ -9,11 +9,7 @@ export const Products = () => {
     return (
         <Layout>
             <h2 className="text-3xl font-semibold pt-8">Products</h2>
-
-            {/* Product Table */}
             <ProductsTable />
-
-            {/* Add Product Button */}
             <div className="flex justify-start md:justify-end mt-6 mr-5">
                 <button
                     onClick={() => setIsModalOpen(true)}
@@ -22,8 +18,6 @@ export const Products = () => {
                     Add Product
                 </button>
             </div>
-
-            {/* Modal */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-2 sm:px-4 overflow-y-auto">
                     <div className="relative bg-white w-full max-w-3xl rounded-lg shadow-lg p-4 sm:p-6 my-10 max-h-[90vh] overflow-y-auto">
@@ -34,7 +28,6 @@ export const Products = () => {
                         >
                             &times;
                         </button>
-
                         <AddProductForm />
                     </div>
                 </div>
