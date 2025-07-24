@@ -40,30 +40,26 @@ export const Shop = () => {
     useEffect(() => {
         let updated = [...products];
 
-        // Category filter
         if (selectedCategories.length > 0) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-expect-error
             updated = updated.filter(p => selectedCategories.includes(p.category));
         }
 
-        // Price range filter
         updated = updated.filter(p =>
             (p.salePrice || p.price) >= priceRange[0] &&
             (p.salePrice || p.price) <= priceRange[1]
         );
 
-        // Sale-only filter
         if (showSaleOnly) {
             updated = updated.filter(p => p.isOnSale === true);
         }
 
-        // Sorting
-        if (sortOption === "Emri: A në Zh" || "Name: A to Z") {
+        if (sortOption === "Emri: A në Zh" || sortOption === "Name: A to Z") {
             updated.sort((a, b) => a.name.localeCompare(b.name));
-        } else if (sortOption === "Çmimi: Nga më i ulëti" || "Price: Low to High") {
+        } else if (sortOption === "Çmimi: Nga më i ulëti" || sortOption === "Price: Low to High") {
             updated.sort((a, b) => (a.salePrice || a.price) - (b.salePrice || b.price));
-        } else if (sortOption === "Çmimi: Nga më i larti") {
+        } else if (sortOption === "Çmimi: Nga më i larti" || sortOption === "Price: High to Low") {
             updated.sort((a, b) => (b.salePrice || b.price) - (a.salePrice || a.price));
         }
 
