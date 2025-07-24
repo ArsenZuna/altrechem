@@ -197,8 +197,6 @@ export const AddOrderForm = ({ onSuccess }) => {
                     + Add Item
                 </button>
             </div>
-
-            {/* Price Summary */}
             <div className="text-right space-y-2 text-sm sm:text-base">
                 <p>Items Price: <strong>{itemsPrice} ALL</strong></p>
                 <p>Total Price: <strong>{totalPrice} ALL</strong></p>
