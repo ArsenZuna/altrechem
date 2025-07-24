@@ -1,4 +1,3 @@
-// src/pages/Shop.tsx
 import {useEffect, useState} from "react";
 import {Layout} from "../utils/Layout";
 import {PageIntro} from "../components/PageIntro";
@@ -60,11 +59,11 @@ export const Shop = () => {
         }
 
         // Sorting
-        if (sortOption === "Name: A to Z") {
+        if (sortOption === "Emri: A në Zh" || "Name: A to Z") {
             updated.sort((a, b) => a.name.localeCompare(b.name));
-        } else if (sortOption === "Price: Low to High") {
+        } else if (sortOption === "Çmimi: Nga më i ulëti" || "Price: Low to High") {
             updated.sort((a, b) => (a.salePrice || a.price) - (b.salePrice || b.price));
-        } else if (sortOption === "Price: High to Low") {
+        } else if (sortOption === "Çmimi: Nga më i larti") {
             updated.sort((a, b) => (b.salePrice || b.price) - (a.salePrice || a.price));
         }
 
