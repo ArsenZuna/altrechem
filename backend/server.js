@@ -13,10 +13,7 @@ connectDB();
 const app = express();
 
  app.use(cors({
-  origin: [
-    'https://altrechem.netlify.app',
-    'http://localhost:5173'
-  ], 
+  origin: 'https://altrechem.netlify.app',
    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
    allowedHeaders: ['Content-Type','Authorization']
 }));

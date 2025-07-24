@@ -135,8 +135,7 @@
     {
       "header": "Client Profile",
       "name": "Full Name",
-      "email": "Email Address",
-      "role": "Role"
+      "email": "Email Address"
     },
     {
       "table": [

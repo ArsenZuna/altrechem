@@ -78,11 +78,6 @@ export const ClientProfile = () => {
                     <h4 className="text-sm text-gray-500">{t("profile.0.email")}</h4>
                     <p className="text-lg font-semibold">{user.email}</p>
                 </div>
-
-                <div>
-                    <h4 className="text-sm text-gray-500">{t("profile.0.role")}</h4>
-                    <p className="text-lg font-semibold capitalize">{user.role}</p>
-                </div>
             </div>
 
             <div>

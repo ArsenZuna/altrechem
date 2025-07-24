@@ -135,8 +135,7 @@
     {
       "header": "Profili i Klientit",
       "name": "Emri i Plotë",
-      "email": "Adresa e Email-it",
-      "role": "Roli"
+      "email": "Adresa e Email-it"
     },
     {
       "table": [

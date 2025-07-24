@@ -13,11 +13,7 @@ export const Orders = () => {
     return (
         <Layout>
             <h2 className="text-3xl font-semibold pt-8">Products</h2>
-
-            {/* Product Table */}
             <OrdersTable />
-
-            {/* Add Product Button */}
             <div className="flex justify-start md:justify-end mt-6 mr-5">
                 <button
                     onClick={() => setIsModalOpen(true)}

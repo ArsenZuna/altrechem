@@ -39,12 +39,23 @@ export const AddOrderForm = ({ onSuccess }) => {
         value: string | number
     ) => {
         const updatedItems = [...orderItems];
-        updatedItems[index] = {
-            ...updatedItems[index],
-            [field]: value,
-        };
+
+        if (field === 'product') {
+            const selectedProduct = products.find((p: Product) => p._id === value);
+            if (selectedProduct) {
+                // @ts-ignore
+                updatedItems[index] = {product: selectedProduct._id, qty: 1, price: selectedProduct.price, countInStock: selectedProduct.countInStock, name: selectedProduct.name, image: selectedProduct.image};
+            }
+        } else {
+            updatedItems[index] = {
+                ...updatedItems[index],
+                [field]: value
+            };
+        }
+
         setOrderItems(updatedItems);
     };
+
 
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
@@ -71,9 +82,6 @@ export const AddOrderForm = ({ onSuccess }) => {
         }
     };
 
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
     return (
         <form onSubmit={handleSubmit} className="space-y-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">Add Guest Order</h2>
@@ -128,7 +136,6 @@ export const AddOrderForm = ({ onSuccess }) => {
                         onChange={(e) => setPaymentMethod(e.target.value)}
                         className="w-full border border-gray-300 rounded p-2"
                     >
-                        <option value="PayPal">PayPal</option>
                         <option value="Cash">Cash</option>
                     </select>
                 </div>
@@ -180,7 +187,6 @@ export const AddOrderForm = ({ onSuccess }) => {
                                 type="number"
                                 value={item.price}
                                 className="border border-gray-200 bg-gray-100 rounded p-2"
-                                disabled
                             />
 
                             <div className="font-medium text-right text-sm sm:text-base">
